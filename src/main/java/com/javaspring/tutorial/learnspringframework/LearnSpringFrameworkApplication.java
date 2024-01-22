@@ -18,7 +18,6 @@ public class LearnSpringFrameworkApplication {
 		//MarioGame game = new MarioGame();
 		//SuperContra game = new SuperContra();
 		//GameRunner runner = new GameRunner(game);
-
 		GameRunner runner = context.getBean(GameRunner.class);
 		runner.run();
 	}
