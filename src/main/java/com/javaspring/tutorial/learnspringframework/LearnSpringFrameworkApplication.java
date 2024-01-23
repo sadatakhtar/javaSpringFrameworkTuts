@@ -21,6 +21,7 @@ public class LearnSpringFrameworkApplication {
 //		GameRunner runner = context.getBean(GameRunner.class);
 //		runner.run();
 
+
 		MyWebController controller = context.getBean(MyWebController.class);
 		System.out.println(controller.returnValueFromBusinessService());
 	}
