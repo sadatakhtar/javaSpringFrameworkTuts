@@ -1,5 +1,6 @@
 package com.javaspring.tutorial.learnspringframework;
 
+import com.javaspring.tutorial.learnspringframework.enterprise.example.MyWebController;
 import com.javaspring.tutorial.learnspringframework.game.GameRunner;
 import com.javaspring.tutorial.learnspringframework.game.MarioGame;
 import com.javaspring.tutorial.learnspringframework.game.Pacman;
@@ -13,13 +14,15 @@ public class LearnSpringFrameworkApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext context = SpringApplication.run(LearnSpringFrameworkApplication.class, args);
-
 		//Pacman game = new Pacman();
 		//MarioGame game = new MarioGame();
 		//SuperContra game = new SuperContra();
-		//GameRunner runner = new GameRunner(game);
-		GameRunner runner = context.getBean(GameRunner.class);
-		runner.run();
+//		//GameRunner runner = new GameRunner(game);
+//		GameRunner runner = context.getBean(GameRunner.class);
+//		runner.run();
+
+		MyWebController controller = context.getBean(MyWebController.class);
+		System.out.println(controller.returnValueFromBusinessService());
 	}
 
 }

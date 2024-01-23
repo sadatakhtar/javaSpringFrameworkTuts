@@ -1,8 +1,10 @@
 package com.javaspring.tutorial.learnspringframework.game;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-//@Component
+@Component
+@Primary
 public class SuperContra implements GameConsole{
     public void up(){
         System.out.println("SuperContra up");
